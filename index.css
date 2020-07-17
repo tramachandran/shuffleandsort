@@ -1,0 +1,242 @@
+*, *::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Used to store the variables */
+:root {
+    --mobile-bg-color: #FFFFFF;
+    --btn-color: rgb(85, 202, 255);
+    --text-color: ##000000;
+    --one-color: #6F98A8;
+    --two-color: #2B8EAD;
+    --three-color: #2F454E;
+    --four-color: #2B8EAD;
+    --five-color: #2F454E;
+    --six-color: #BFBFBF;
+    --seven-color: #BFBFBF;
+    --eight-color: #6F98A8;
+    --nine-color: #2F454E;
+    --default-color: #333333;
+    --box-bg-color: #EEEEEE;
+    --border-width: 8px;
+    --btn-text-color: #FFFFFF;
+    --header-text-color: #FFFFFF;
+    --desktop-ctn-bg-color: #EEEEEE;
+    --desktop-top-border: #BFBFBF;
+    --desktop-bg-color: #FFFFFF;
+}
+
+/* 
+    For screen width less than 500 px
+*/
+div.header {
+    height: 8vh;
+    text-align: center;
+    background-color: var(--five-color);
+    color: var(--header-text-color);
+    border: none;
+    border-top: 5px solid var(--three-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mobile-bg-color);
+    height: 92vh;
+    border: 5px solid var(--three-color);
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+div.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: small;
+    box-shadow: 0px 4px 0px 0px var(--eight-color);
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    flex-basis: 25%;
+}
+
+div.box-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    height: 80%;
+}
+
+div.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    background-color: var(--box-bg-color);
+    margin: 0 0.5rem;
+    border-left: var(--border-width) solid;
+    height: 10%;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+
+div.box:nth-child(1) {
+    border-color: var(--one-color);
+    order: 1;
+}
+div.box:nth-child(2) {
+    border-color: var(--two-color);
+    order: 2;
+}
+div.box:nth-child(3) {
+    border-color: var(--three-color);
+    order: 3;
+}
+div.box:nth-child(4) {
+    border-color: var(--four-color);
+    order: 4;
+}
+div.box:nth-child(5) {
+    border-color: var(--five-color);
+    order: 5;
+}
+div.box:nth-child(6) {
+    border-color: var(--six-color);
+    order: 6;
+}
+div.box:nth-child(7) {
+    border-color: var(--seven-color);
+    order: 7;
+}
+div.box:nth-child(8) {
+    border-color: var(--eight-color);
+    order: 8;
+}
+div.box:nth-child(9) {
+    border-color: var(--nine-color);
+    order: 9;
+}
+
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+}
+/* 
+    For screen width equals or more than 500 px
+    e.g tablet, desktop
+*/
+@media screen and (min-width: 500px) {
+    body {
+        background-color: var(--desktop-bg-color);
+    }
+    div.header {
+        background-color: var(--desktop-bg-color);
+        border: none;
+        color: var(--text-color);
+        height: 5vh;
+    }
+    div.container {
+        flex-flow: row wrap;
+        background-color: var(--desktop-ctn-bg-color);
+        border: none;
+        border-top: 5px solid var(--desktop-top-border);
+        height: 95vh;
+    }
+    div.btn-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        order: 2;
+        flex-basis: 20%;
+        height: 30%;
+    }
+    .btn {
+        margin: 1rem;
+        width: 80%;
+    }
+    div.box-container {
+        flex-basis: 75%;
+        order: 1;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 90%
+    }
+    div.footer {
+        flex-basis: 100%;
+        order: 3;
+    }
+    div.box {
+        border: none;
+        color: var(--header-text-color);
+        flex-basis: 28%;
+        margin: 0;
+        padding: 0;
+        height: 35%;
+        font-size: 4rem;
+    }
+    div.box:nth-child(1) {
+        background-color: var(--one-color);
+        order: 1;
+    }
+    div.box:nth-child(2) {
+        background-color: var(--two-color);
+        order: 2;
+    }
+    div.box:nth-child(3) {
+        background-color: var(--three-color);
+        order: 3;
+    }
+    div.box:nth-child(4) {
+        background-color: var(--four-color);
+        order: 4;
+    }
+    div.box:nth-child(5) {
+        background-color: var(--five-color);
+        order: 5;
+    }
+    div.box:nth-child(6) {
+        background-color: var(--six-color);
+        order: 6;
+    }
+    div.box:nth-child(7) {
+        background-color: var(--seven-color);
+        order: 7;
+    }
+    div.box:nth-child(8) {
+        background-color: var(--eight-color);
+        order: 8;
+    }
+    div.box:nth-child(9) {
+        background-color: var(--nine-color);
+        order: 9;
+    }
+    div.footer {
+        align-items: flex-end;
+        height: 8%;
+    }
+}
